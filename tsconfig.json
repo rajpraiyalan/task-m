@@ -1,9 +1,12 @@
 {
   "extends": "@tsconfig/node22/tsconfig.json",
   "compilerOptions": {
+    "module": "es2022",
     "outDir": "./dist",
     "rootDir": "./",
+    "strict": true,
+    "moduleResolution": "bundler"
   },
   "include": ["**/*.ts"],
-  "exclude": ["dist"]
+  "exclude": ["dist", "tests"]
 }
