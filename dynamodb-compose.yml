@@ -1,0 +1,11 @@
+services:
+  dynamodb-local:
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ."
+    image: "amazon/dynamodb-local:latest"
+    container_name: dynamodb-local
+    environment:
+      AWS_ACCESS_KEY_ID: 'accessId'
+      AWS_SECRET_ACCESS_KEY: 'accessKey'
+    ports:
+      - "8000:8000"
+    working_dir: /home/dynamodblocal
