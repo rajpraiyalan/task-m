@@ -1,5 +1,5 @@
 import request from 'supertest';
-import {expect, describe, it} from '@jest/globals';
+import {expect, it, describe} from 'vitest'
 import {faker} from '@faker-js/faker';
 
 import app from '../../../src/app';
