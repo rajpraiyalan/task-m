@@ -1,8 +1,9 @@
 import {Request} from 'express';
 import BaseService from '../services/BaseService';
 import DocumentFoundError from '../errors/DocumentFoundError';
+import Controller from './Controller';
 
-export default class BaseController {
+export default class BaseController implements Controller {
   service: BaseService;
 
   constructor(service: BaseService) {

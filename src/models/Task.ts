@@ -27,10 +27,7 @@ const taskSchema = new dynamoose.Schema({
   description: String,
   status: Number,
 }, {
-  timestamps: {
-    createdAt: ['createDate', 'creation'],
-    updatedAt: ['updateDate', 'updated'],
-  },
+  timestamps: true,
 });
 
 const TaskModel = dynamoose.model<Task>('Task', taskSchema);
